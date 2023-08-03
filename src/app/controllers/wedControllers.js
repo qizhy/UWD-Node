@@ -5,6 +5,8 @@ class wedControllers {
 
     async addNewWedsite (req, res) {
         try {
+            console.log(1)
+            console.log(req.file.path)
             const wed = await new Wed ({
                 title : req.body.title,
                 url : req.body.url,

@@ -23,7 +23,7 @@ db.connect()
 // Routes
 app.use('/v1/auth', authRouter)
 app.use('/v1/user', userRouter)
-app.use('/v1/wed', wedRouterRouter)
+app.use('/v1/wed', wedRouter)
 
 app.get('/',(req,  res) => {
   res.send('Welcome')

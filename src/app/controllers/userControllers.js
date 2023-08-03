@@ -5,6 +5,24 @@ const bcrypt = require('bcryptjs')
 
 class userControllers {
 
+    async updateActionLike (req, res) {
+        try {
+            console.log(req.body.likes)
+            await User.updateOne({ _id: req.user_id }, { likes : req.body.likes })
+            res.json({code : 200, message : 'success'})
+        } catch (error) {
+            res.json({code : 500, message : 'fail'})
+        }
+    }
+    async getUser (req, res) {
+        try {
+            const user = await User.findById(req.query.id)   
+            const {password, ...currentUser} = user
+            res.json({code : 200, currentUser})
+        } catch (error) {
+            res.json({code : 404, message : 'Not Found'})
+        }
+    }
     async getCurrentUser (req, res) {
         try {
             const user = await User.findById(req.user_id)   

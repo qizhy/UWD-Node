@@ -43,6 +43,11 @@ const User = new Schema ({
         type : String,
         require : true,
         default : ''
+    },
+    likes : {
+        type : [String],
+        require : true,
+        default : []
     }
 }, {timestamps : true})
 

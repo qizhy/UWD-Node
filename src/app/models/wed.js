@@ -13,10 +13,22 @@ const Weds = new Schema ({
         unique : true ,
         require : true
     },
-    URL_image : {
+    url_image : {
         type : String,
         require : true,
         default : ''
+    },
+    user_id : {
+        type : String,
+        require : true
+    },
+    view : {
+        type : Number,
+        require : true
+    },
+    like : {
+        type : Number,
+        require : true
     }
 }, {timestamps : true})
 module.exports = mongoose.model('weds', Weds)

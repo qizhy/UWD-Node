@@ -4,6 +4,7 @@ const dotenv = require('dotenv')
 const db = require('./src/config/db')
 const authRouter = require('./src/routes/auth')
 const userRouter  = require('./src/routes/user')
+const wedRouter = require('./src/routes/wed')
 const morgan = require('morgan')
 const app = express()
 const port = 8080 
@@ -22,6 +23,7 @@ db.connect()
 // Routes
 app.use('/v1/auth', authRouter)
 app.use('/v1/user', userRouter)
+app.use('/v1/wed', wedRouterRouter)
 
 app.get('/',(req,  res) => {
   res.send('Welcome')

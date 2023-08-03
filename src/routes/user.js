@@ -1,6 +1,5 @@
 
 const router = require('express').Router()
-const multer = require('multer')
 const middlewareControllers = require('../app/controllers/middlewareControllers')
 const userControllers = require('../app/controllers/userControllers')
 const fileUploader = require('../config/uploader');

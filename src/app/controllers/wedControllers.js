@@ -3,6 +3,16 @@ const Wed = require('../models/wed')
 
 class wedControllers {
 
+    async deleteWedsite (res, req) {
+        try {
+            console.log(req.body.id)
+            await Wed.deleteOne({ _id: req.body.id });
+            res.json({code : 200, message : 'success'})
+        } catch (error) {
+            res.json({code : 500, message : 'fail'})
+        }
+    }
+
     async updateView (req, res) {
         try {
             await Wed.updateOne({ _id: req.body.id }, { view : req.body.view })

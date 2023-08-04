@@ -7,5 +7,6 @@ router.post('/add-new-wedsite',  middlewareControllers.verifyToken, fileUploader
 router.get('/get-all-wedsite', wedControllers.getAllWedsite)
 router.put('/update-like', wedControllers.updateLike)
 router.put('/update-view', wedControllers.updateView)
+router.delete('/delete-wedsite', wedControllers.deleteWedsite)
 
 module.exports = router 

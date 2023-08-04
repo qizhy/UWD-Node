@@ -3,7 +3,7 @@ const Wed = require('../models/wed')
 
 class wedControllers {
 
-    async deleteWedsite (res, req) {
+    async deleteWedsite (req, res) {
         try {
             console.log(req.body.id)
             await Wed.deleteOne({ _id: req.body.id });

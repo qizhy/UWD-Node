@@ -42,7 +42,7 @@ const User = new Schema ({
     URL_Avatar : {
         type : String,
         require : true,
-        default : ''
+        default : 'https://res.cloudinary.com/dirzctcko/image/upload/v1691145127/UWD_NodeJS/cyzii71p7ypbbyjujvrv.png'
     },
     likes : {
         type : [String],
